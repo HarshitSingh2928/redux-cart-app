@@ -14,7 +14,8 @@ const CartPage = (props) => {
           
           <p>Price: INR 90,000</p>
           <div className="quantity-controls">
-            <button onClick={props.delItem}>-</button>
+          <button onClick={() => props.totalQuantity !== 0 && props.delItem()}>-</button>
+
             <span>{props.totalQuantity}</span>
             <button onClick={props.addItem}>+</button>
           </div>
